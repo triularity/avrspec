@@ -46,7 +46,8 @@ GPIO <func-id> <names> [<index>]
 
 	Define a logical GPIO pin.
 
-	func-id		The function ID. This must be declared by a FUNC entry.
+	func-id		The function ID. This must be declared by a FUNC or
+			or ADC_MUX entry.
 
 	names		The digital and/or analog tag names in the form of
 			Dn and An. Multiple valuesare separated by a slash (/).
@@ -55,6 +56,31 @@ GPIO <func-id> <names> [<index>]
 			digital pin name (e.g. D3). If both are specified,
 			then they must match. Entries without specified index
 			will be added after all defined indexes.
+
+
+OPTION <name> [<value>]
+
+	Define an option.
+
+	name		A symbol name.
+
+	value		The value the option is set to.
+
+
+ADC_REF <func-id> <value>
+
+	func-id		A source function.
+
+	value		The index that maps to a REFS value.
+
+
+ADC_MUX <func-ids> <channel>
+
+	func-ids	A source function. Multiple values are separated by
+			a slash (/).
+
+	channel		The channel number that maps to a MUX value.
+
 
 PAD <func-id> <sockets> <number>
 

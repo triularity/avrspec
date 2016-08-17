@@ -1,3 +1,10 @@
+#
+# Note: The ATmega328 datasheet includes all of these,
+# while the specific XXXXa and XXXXpa datasheets only contain their suffixes. 
+# This can be confusing depending on which Atmel AVR you used to get to their
+# datasheet.
+#
+
 #	MCU		Pre-Processor
 CORE	atmega48a	__AVR_ATmega48A__
 CORE	atmega48pa	__AVR_ATmega48PA__
@@ -35,6 +42,29 @@ FUNC	PD5	PCINT21/OC0B/T1
 FUNC	PD6	PCINT22/OC0A/AIN0
 FUNC	PD7	PCINT23/AIN1
 
+#	Name		[Value]
+OPTION	REFS		1		# REFS[1:0]
+OPTION	MUX		3		# MUX[3:0]
+OPTION	ADMUX_ADLAR			# ADMUX.ADLAR
+
+#	Func		Number
+ADC_REF	AREF		0		# 0b00
+ADC_REF	AVCC		1		# 0b01 (with AREF capacitor)
+ADC_REF	REF_1_1		3		# 0b11 (1.1v Internal Reference)
+
+#	Func		Channel
+ADC_MUX	ADC0		0		# 0b0000
+ADC_MUX	ADC1		1		# 0b0001
+ADC_MUX	ADC2		2		# 0b0010
+ADC_MUX	ADC3		3		# 0b0011
+ADC_MUX	ADC4		4		# 0b0100
+ADC_MUX	ADC5		5		# 0b0101
+ADC_MUX	ADC6		6		# 0b0110
+ADC_MUX	ADC7		7		# 0b0111
+ADC_MUX	TMP		8		# 0b1000 (Temperature)
+ADC_MUX	REF_1_1		14		# 0b1110 (1.1v Reference)
+ADC_MUX	AGND		15		# 0b1111 (0v GND)
+
 #	Func	Names		Index
  #> Arduino
 GPIO	PD0	D0
@@ -63,6 +93,7 @@ GPIO	ADC7	A7		21
 GPIO	PC6	D22
 GPIO	PB6	D23
 GPIO	PB7	D24
+#GPIO	TMP	A20
 
 #	Func	Sockets			Pin
 PAD	PC6	28-PDIP			1

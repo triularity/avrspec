@@ -39,6 +39,29 @@ FUNC	-RESET
 FUNC	XTAL1
 FUNC	XTAL2
 
+#	Name		[Value]
+OPTION	REFS		1		# REFS[1:0]
+OPTION	MUX		4		# MUX[4:0]
+OPTION	ADMUX_ADLAR			# ADMUX.ADLAR
+
+#	Func		Number
+ADC_REF	AREF		0		# 0b00
+ADC_REF	AVCC		1		# 0b01 (with AREF capacitor)
+ADC_REF	REF_1_1		2		# 0b10 (1.1v Internal Reference)
+ADC_REF	REF_2_56	3		# 0b11 (2.56v Internal Reference)
+
+#	Func		Channel
+ADC_MUX	ADC0		0		# 0b00000
+ADC_MUX	ADC1		1		# 0b00001
+ADC_MUX	ADC2		2		# 0b00010
+ADC_MUX	ADC3		3		# 0b00011
+ADC_MUX	ADC4		4		# 0b00100
+ADC_MUX	ADC5		5		# 0b00101
+ADC_MUX	ADC6		6		# 0b00110
+ADC_MUX	ADC7		7		# 0b00111
+ADC_MUX	REF_1_1		30		# 0b11110 (1.1v Internal Reference)
+ADC_MUX	AGND		31		# 0b11111 (0v GND)
+
 #	Func	Names		Index
 GPIO	PB0	D0
 GPIO	PB1	D1

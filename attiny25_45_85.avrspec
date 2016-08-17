@@ -11,6 +11,27 @@ FUNC	PB3	PCINT3/XTAL1/CLKI/-OC1B/ADC3
 FUNC	PB4	PCINT4/XTAL2/CLKO/OC1B/ADC2
 FUNC	PB5	PCINT5/-RESET/ADC0/dW
 
+#	Name		[Value]
+OPTION	REFS		2		# REFS[2:0]
+OPTION	MUX		3		# MUX[3:0]
+OPTION	ADMUX_ADLAR			# ADMUX.ADLAR
+
+#	Func		Number
+ADC_REF	AVCC		0		# 0b000
+ADC_REF	AREF		1		# 0b001
+ADC_REF	REF_1_1		2		# 0b010 (1.1v Internal Reference)
+ADC_REF	REF_2_56	6		# 0b110 (2.56v Internal Reference)
+ADC_REF	REF_2_56_BYPASS	7		# 0b111 (2.56v Ref with AREF bypass)
+
+#	Func		Channel
+ADC_MUX	ADC0		0		# 0b0000
+ADC_MUX	ADC1		1		# 0b0001
+ADC_MUX	ADC2		2		# 0b0010
+ADC_MUX	ADC3		3		# 0b0011
+ADC_MUX	ADC4/TMP	15		# 0b1111 (Temperature)
+ADC_MUX	REF_BANDGAP	12		# 0b1100 (Internal Bandgap Reference)
+ADC_MUX	AGND		13		# 0b1101 (0v GND)
+
 #	Func	Names		Index
  #> Arduino (damellis package - except analog->digital pin # mapping)
 GPIO	PB0	D0
