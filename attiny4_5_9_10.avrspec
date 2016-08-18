@@ -1,8 +1,8 @@
 #	MCU		Pre-Processor
-CORE	attiny4		__AVR_ATTiny4__
-CORE	attiny5		__AVR_ATTiny5__
-CORE	attiny9		__AVR_ATTiny9__
-CORE	attiny10	__AVR_ATTiny10__
+CORE	attiny4		__AVR_ATtiny4__
+CORE	attiny5		__AVR_ATtiny5__
+CORE	attiny9		__AVR_ATtiny9__
+CORE	attiny10	__AVR_ATtiny10__
 
 #	ID	Alternates
 FUNC	PB0	PCINT0/TPIDATA/OC0A~16/ADC0/AIN0

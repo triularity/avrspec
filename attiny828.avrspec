@@ -1,5 +1,5 @@
 #	MCU		Pre-Processor
-CORE	attiny828	__AVR_ATTiny828__
+CORE	attiny828	__AVR_ATtiny828__
 
 #	ID	Alternates
 FUNC	PA0	PCINT0/ADC0

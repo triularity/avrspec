@@ -94,6 +94,7 @@ FUNC	PL6					!atmega1281/atmega2561
 FUNC	PL7					!atmega1281/atmega2561
 
 #	Name		[Value]
+OPTION	HIGH_IOM			# I/O addresses > 0xFF
 OPTION	REFS		1		# REFS[1:0]
 OPTION	ADCSRB_MUX5			# ADCSRB.MUX5
 OPTION	MUX		5		# MUX[5:0]

@@ -1,6 +1,6 @@
 #	MCU		Pre-Processor
-CORE	attiny13	__AVR_ATTiny13__
-CORE	attiny13a	__AVR_ATTiny13A__
+CORE	attiny13	__AVR_ATtiny13__
+CORE	attiny13a	__AVR_ATtiny13A__
 
 #	ID	Alternates
 FUNC	PB0	MOSI/AIN0/OC0A/PCINT0

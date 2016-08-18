@@ -1,7 +1,7 @@
 #	MCU		Pre-Processor
-CORE	attiny24	__AVR_ATTiny24__
-CORE	attiny44	__AVR_ATTiny44__
-CORE	attiny84	__AVR_ATTiny84__
+CORE	attiny24	__AVR_ATtiny24__
+CORE	attiny44	__AVR_ATtiny44__
+CORE	attiny84	__AVR_ATtiny84__
 
 #	ID	Alternates
 FUNC	PA0	ADC0/AREF/PCINT0
