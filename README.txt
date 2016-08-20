@@ -66,6 +66,27 @@ OPTION <name> [<value>]
 
 	value		The value the option is set to.
 
+	Defined options:
+
+		ADCSRB_ADLAR	The ADCSRB register contains the ADLAR bit.
+		ADCSRB_MUX5	The ADCSRB register contains the MUX5 bit.
+		ADCSRB_REFS2	The ADCSRB register contains the REFS2 bit.
+		ADMUXB_MUX5	The ADMUXB register contains the MUX5 bit.
+		ADMUX_ADLAR	The ADMUX register contains the ADLAR bit.
+		ADMUX_MUX5	The ADMUX register contains the MUX5 bit.
+		ADMUX_REFS2	The ADMUX register contains the REFS2 bit.
+		HIGH_IOM	The core has I/O addressed > 0xFF.
+		MUX		The value is the highest MUXn bit
+				(e.g. 3 = MUX3)
+				If not set, there is no MUX value.
+		REFS		The value is the highest REFSn bit
+				(e.g. 2 = REFS2)
+				If not set, there is no REFS value.
+		OCnx_TCCR	Override the normal TCCRnx register used for
+				OCnx with the one this specifies (e.g. GTCCR).
+		OCnx_TCCR_EXTRA	Extra named bits to set in the TCCR when the
+				OCnx is enabled (e.g. PWM1A).
+
 
 ADC_REF <func-id> <value>
 
