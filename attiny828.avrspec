@@ -1,3 +1,5 @@
+VERSION	2016.08.25
+
 #	MCU		Pre-Processor
 CORE	attiny828	__AVR_ATtiny828__
 

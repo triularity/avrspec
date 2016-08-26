@@ -4,6 +4,22 @@ Format (subject to significant change):
 
 Any text after a hash (#) is treated as a comment and ignored.
 
+Certain types may have conditions (preceded by a question mark (?)). These
+control when the entry applies.
+
+	Exclude for specific core(s):
+		!<core>[/<core>[/<core>...]]
+
+	Only applies for specific core(s):
+		<core>[/<core>[/<core>...]]
+
+
+VERSION <version>
+
+	Define the version of the specification file.
+
+	version		The version in YYYY.MM.DD([a-z]) format (GMT time).
+
 
 CORE <mcu> <pre-processor>
 
@@ -16,7 +32,7 @@ CORE <mcu> <pre-processor>
 			target. This is typically in the form __AVR_ATxxxxxx__.
 
 
-FUNC <id> [<alternates>] [<conditions>]
+FUNC <id> [<alternates>] [?<conditions>]
 
 	Declare pin function(s).
 
@@ -26,9 +42,6 @@ FUNC <id> [<alternates>] [<conditions>]
 			are separated by a slash (/).
 
 	conditions	Conditions that control when the function applies.
-
-			Exclude for specific cores:
-				!<core>[/<core>[/<core>...]]
 
 	IDs must start with a letter, followed by zero or more letters (A-Z),
 	numbers (0-9), or underscores (_). IDs are normally only uppercase,
@@ -58,13 +71,15 @@ GPIO <func-id> <names> [<index>]
 			will be added after all defined indexes.
 
 
-OPTION <name> [<value>]
+OPTION <name> [<value>] [?<conditions>]
 
 	Define an option.
 
 	name		A symbol name.
 
 	value		The value the option is set to.
+
+	conditions	Conditions that control when the function applies.
 
 	Defined options:
 
@@ -75,6 +90,8 @@ OPTION <name> [<value>]
 		ADMUX_ADLAR	The ADMUX register contains the ADLAR bit.
 		ADMUX_MUX5	The ADMUX register contains the MUX5 bit.
 		ADMUX_REFS2	The ADMUX register contains the REFS2 bit.
+		MCUCR_PUD	The MCUCR register contains the PUD bit.
+		SFIOR_PUD	The SFIOR register contains the PUD bit.
 		HIGH_IOM	The core has I/O addressed > 0xFF.
 		MUX		The value is the highest MUXn bit
 				(e.g. 3 = MUX3)
@@ -86,6 +103,12 @@ OPTION <name> [<value>]
 				OCnx with the one this specifies (e.g. GTCCR).
 		OCnx_TCCR_EXTRA	Extra named bits to set in the TCCR when the
 				OCnx is enabled (e.g. PWM1A).
+		OCnx_REMAP	The timer is only connected to the function
+				specified when in remap mode.
+		PROGMEM_SIZE	The value is the flash/PROGMEM size in bytes.
+		RAM_SIZE	The value is the internal SRAM size in bytes.
+		EEPROM_SIZE	The value is the EEPROM size in bytes.
+				If not set, there is no EEPROM.
 
 
 ADC_REF <func-id> <value>

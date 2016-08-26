@@ -1,3 +1,5 @@
+VERSION	2016.08.26
+
 #
 # Note: The ATmega328 datasheet includes all of these,
 # while the specific XXXXa and XXXXpa datasheets only contain their suffixes. 
@@ -46,6 +48,17 @@ FUNC	PD7	PCINT23/AIN1
 OPTION	REFS		1		# REFS[1:0]
 OPTION	MUX		3		# MUX[3:0]
 OPTION	ADMUX_ADLAR			# ADMUX.ADLAR
+OPTION	MCUCR_PUD			# MCUCR.PUD
+#OPTION	PROGMEM_SIZE	4096			?atmega48a/atmega48pa
+#OPTION	PROGMEM_SIZE	8192			?atmega88a/atmega88pa
+#OPTION	PROGMEM_SIZE	16384			?atmega168a/atmega168pa
+#OPTION	PROGMEM_SIZE	32768			?atmega328/atmega328p
+#OPTION	RAM_SIZE	512			?atmega48a/atmega48pa
+#OPTION	RAM_SIZE	1024			?atmega88a/atmega88pa/atmega168a/atmega168pa
+#OPTION	RAM_SIZE	2048			?atmega328/atmega328p
+#OPTION	EEPROM_SIZE	256			?atmega48a/atmega48pa
+#OPTION	EEPROM_SIZE	512			?atmega88a/atmega88pa/atmega168a/atmega168pa
+#OPTION	EEPROM_SIZE	1024			?atmega328/atmega328p
 
 #	Func		Number
 ADC_REF	AREF		0		# 0b00

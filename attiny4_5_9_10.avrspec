@@ -1,3 +1,5 @@
+VERSION	2016.08.25
+
 #	MCU		Pre-Processor
 CORE	attiny4		__AVR_ATtiny4__
 CORE	attiny5		__AVR_ATtiny5__
@@ -12,6 +14,9 @@ FUNC	PB3	-RESET/PCINT3/ADC3
 
 #	Name		[Value]
 OPTION	MUX		1		# MUX[1:0]
+#OPTION	PROGMEM_SIZE	512			?attiny4/attiny5
+#OPTION	PROGMEM_SIZE	1024			?attiny9/attiny10
+OPTION	RAM_SIZE	32
 
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b00
