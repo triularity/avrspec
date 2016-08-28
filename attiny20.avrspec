@@ -56,7 +56,7 @@ GPIO	PB0	D8
 GPIO	PB1	D9
 GPIO	PB2	D10
 GPIO	PB3	D11
-GPIO	ADC_TMP	A8			# Temperature Sensor
+GPIO	ADC8	A8			# Temperature Sensor
 
 #	Func	Sockets			Pin
 PAD	VCC	14-SOIC/14-TSSOP	1
