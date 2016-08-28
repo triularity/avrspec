@@ -35,6 +35,8 @@ FUNC	-RESET
 FUNC	XTAL1
 FUNC	XTAL2
 
+FUNC	ADC_TMP		# Internal Temperature Sensor
+
 #	Name		[Value]
 OPTION	REFS		1		# REFS[1:0]
 OPTION	ADCSRB_MUX5			# ADCSRB.MUX5
@@ -68,7 +70,7 @@ ADC_MUX	ADC10		34		# 0b100010
 ADC_MUX	ADC11		35		# 0b100011
 ADC_MUX	ADC12		36		# 0b100100
 ADC_MUX	ADC13		37		# 0b100101
-ADC_MUX	TMP		39		# 0b100111 (Temperature)
+ADC_MUX	ADC_TMP		39		# 0b100111 (Temperature)
 
 #	Func	Names		Index
  #> Arduino
@@ -105,7 +107,7 @@ GPIO	PD6	D29/A11
 GPIO	PD5	D30
  #> Non-Arduino
 GPIO	PE2	D31
-#GPIO	TMP	A12		32
+GPIO	ADC_TMP	A12			# Temperature Sensor
 
 #	Func	Sockets			Pin
 PAD	UVCC	44-QFN/44-TQFP		1

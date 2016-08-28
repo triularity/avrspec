@@ -118,12 +118,11 @@ ADC_REF <func-id> <value>
 	value		The index that maps to a REFS value.
 
 
-ADC_MUX <func-ids> <channel>
+ADC_MUX <func-id> <channel>
 
-	func-ids	A source function. Multiple values are separated by
-			a slash (/).
+	func-id		A source function.
 
-	channel		The channel number that maps to a MUX value.
+	channel		The channel number that maps to an ADC MUX value.
 
 
 PAD <func-id> <sockets> <number>

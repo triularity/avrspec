@@ -19,6 +19,8 @@ FUNC	PB1	PCINT9/XTAL2
 FUNC	PB2	PCINT10/INT0/OC0A/CKOUT
 FUNC	PB3	PCINT11/-RESET/dW
 
+FUNC	ADC8		# Internal Temperature Sensor
+
 #	Name		[Value]
 OPTION	REFS		1		# REFS[1:0]
 OPTION	ADMUX_MUX5			# ADMUX.MUX5
@@ -51,7 +53,7 @@ ADC_MUX	ADC6		6		# 0b000110
 ADC_MUX	ADC7		7		# 0b000111
 ADC_MUX	AGND		32		# 0b100000 (0v GND)
 ADC_MUX	REF_1_1		33		# 0b100001 (1.1v Internal Reference)
-ADC_MUX	ADC8/TMP	34		# 0b100010 (Temperature)
+ADC_MUX	ADC8		34		# 0b100010 (Temperature)
 
 #	Func	Names		Index
  #> Arduino (damellis package)
@@ -68,6 +70,7 @@ GPIO	PB1	D9
 GPIO	PB0	D10
  #> Non-Arduino
 GPIO	PB3	D11
+GPIO	ADC8	A8			# Temperature Sensor
 
 #	Func	Sockets			Pin
 PAD	VCC	14-PDIP/14-SOIC		1
