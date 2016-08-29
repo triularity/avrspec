@@ -1,8 +1,7 @@
-VERSION	2016.08.26
+VERSION	2016.08.29
 
 #	MCU		Pre-Processor
 CORE	attiny26	__AVR_ATtiny26__
-CORE	attiny26l	__AVR_ATtiny26L__
 
 #	ID	Alternates
 FUNC	PA0	ADC0
