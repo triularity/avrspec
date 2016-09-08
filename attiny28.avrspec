@@ -2,7 +2,7 @@
 # This is listed as 28L/28V for the datasheet, but the compiler only knows
 # attiny28
 #
-VERSION	2016.08.28
+VERSION	2016.09.08
 
 #	MCU		Pre-Processor
 CORE	attiny28	__AVR_ATtiny28__
@@ -32,7 +32,10 @@ FUNC	RESET
 FUNC	XTAL1
 FUNC	XTAL2
 
+FUNC	OC0
+
 #	Name		[Value]
+OPTION	TCCR0_CS0X			# TCCR0.CS0x
 OPTION	PROGMEM_SIZE	2048
 OPTION	RAM_SIZE	32
 
