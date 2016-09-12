@@ -1,12 +1,6 @@
 VERSION	2016.09.12
 
 #	MCU		Pre-Processor
-CORE	atmega164a	__AVR_ATmega164A__
-CORE	atmega164pa	__AVR_ATmega164PA__
-CORE	atmega324a	__AVR_ATmega324A__
-CORE	atmega324pa	__AVR_ATmega324PA__
-CORE	atmega644a	__AVR_ATmega644A__
-CORE	atmega644pa	__AVR_ATmega644PA__
 CORE	atmega1284	__AVR_ATmega1284__
 CORE	atmega1284p	__AVR_ATmega1284P__
 
