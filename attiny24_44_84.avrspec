@@ -38,11 +38,6 @@ OPTION	EEPROM_SIZE	128			?attiny24
 OPTION	EEPROM_SIZE	256			?attiny44
 OPTION	EEPROM_SIZE	512			?attiny84
 
-#	Func		Number
-ADC_REF	AVCC		0		# 0b00
-ADC_REF	AREF		1		# 0b01
-ADC_REF	REF_1_1		2		# 0b10 (1.1v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b000000
 ADC_MUX	ADC1		1		# 0b000001
@@ -57,6 +52,10 @@ ADC_MUX	REF_1_1		33		# 0b100001 (1.1v Internal Reference)
 ADC_MUX	ADC8		34		# 0b100010 (Temperature)
 
 #	Type	Name			Value
+MAP	REFS	AVCC			0	# 0b00
+MAP	REFS	AREF			1	# 0b01
+MAP	REFS	REF_1_1			2	# 0b10 (1.1v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

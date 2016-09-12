@@ -111,11 +111,15 @@ OPTION <name> [<value>] [?<conditions>]
 				If not set, there is no EEPROM.
 
 
-ADC_REF <func-id> <value>
+MAP <field> <id> <value>
 
-	func-id		A source function.
+	Map a field value.
 
-	value		The index that maps to a REFS value.
+	field		The field to map.
+
+	id		The value name/identifier.
+
+	value		The mapped number value.
 
 
 ADC_MUX <func-id> <channel>

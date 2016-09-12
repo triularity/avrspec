@@ -38,16 +38,6 @@ OPTION	RAM_SIZE	512			?attiny841
 OPTION	EEPROM_SIZE	256			?attiny441
 OPTION	EEPROM_SIZE	512			?attiny841
 
-#	Func			Number
-ADC_REF	VCC			0	# 0b000
-ADC_REF	REF_1_1			1	# 0b001 (1.1v Internal Reference)
-ADC_REF	REF_2_2			2	# 0b010 (2.2v Internal Reference)
-ADC_REF	REF_4_096		3	# 0b011 (4.096v Internal Reference)
-ADC_REF	AREF			4	# 0b100
-ADC_REF	REF_1_1_BYPASS		5	# 0b101 (1.1v Intern Ref + AREF bypass)
-ADC_REF	REF_2_2_BYPASS		6	# 0b110 (2.2v Intern Ref + AREF bypass)
-ADC_REF	REF_4_096_BYPASS	7	# 0b111 (4.096v Intern Ref+AREF bypass)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b00000
 ADC_MUX	ADC1		1		# 0b00001
@@ -67,6 +57,15 @@ ADC_MUX	AGND		14		# 0b01110 (0v GND)
 ADC_MUX	VCC		15		# 0b01111 (VCC)
 
 #	Type	Name			Value
+MAP	REFS	VCC			0	# 0b000
+MAP	REFS	REF_1_1			1	# 0b001 (1.1v Internal Ref)
+MAP	REFS	REF_2_2			2	# 0b010 (2.2v Internal Ref)
+MAP	REFS	REF_4_096		3	# 0b011 (4.096v Internal Ref)
+MAP	REFS	AREF			4	# 0b100
+MAP	REFS	REF_1_1_BYPASS		5	# 0b101 (1.1v Intern Ref+AREF bypass)
+MAP	REFS	REF_2_2_BYPASS		6	# 0b110 (2.2v Intern Ref+AREF bypass)
+MAP	REFS	REF_4_096_BYPASS	7	# 0b111 (4.096v Intern Ref+AREF bypass)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

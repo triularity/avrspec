@@ -36,10 +36,6 @@ OPTION	TCCR1A_ICEN_TCW_CTC		# TCCR1A.ICEN1/TCW1/CTC1
 OPTION	PROGMEM_SIZE	4096
 OPTION	RAM_SIZE	256
 
-#	Func		Number
-ADC_REF	VCC		0		# 0b0
-ADC_REF	REF_1_1		1		# 0b1 (1.1v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b0000
 ADC_MUX	ADC1		1		# 0b0001
@@ -58,6 +54,9 @@ ADC_MUX	REF_1_1		13		# 0b1101 (1.1v Internal Reference)
 ADC_MUX	ADC12		14		# 0b1110 (Temperature)
 
 #	Type	Name			Value
+MAP	REFS	VCC			0	# 0b0
+MAP	REFS	REF_1_1			1	# 0b1 (1.1v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

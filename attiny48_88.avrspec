@@ -49,10 +49,6 @@ OPTION	RAM_SIZE	256			?attiny48
 OPTION	RAM_SIZE	512			?attiny48
 OPTION	EEPROM_SIZE	64
 
-#	Func		Number
-ADC_REF	REF_1_1		0		# 0b0 (1.1v Internal Reference)
-ADC_REF	AVCC		1		# 0b1
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b0000
 ADC_MUX	ADC1		1		# 0b0001
@@ -67,6 +63,9 @@ ADC_MUX	REF_1_1		14		# 0b1110 (1.1v Internal Reference)
 ADC_MUX	GND		15		# 0b1111 (0v GND)
 
 #	Type	Name			Value
+MAP	REFS	REF_1_1			0	# 0b0 (1.1v Internal Ref)
+MAP	REFS	AVCC			1	# 0b1
+
 MAP	WGM1	NORMAL:0xFFFF		0
 MAP	WGM1	PWM_PC:0xFF		1
 MAP	WGM1	PWM_PC:0x1FF		2

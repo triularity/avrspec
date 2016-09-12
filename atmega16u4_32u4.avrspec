@@ -55,11 +55,6 @@ OPTION	RAM_SIZE	2560			?atmega32u4
 OPTION	EEPROM_SIZE	512			?atmega16u4
 OPTION	EEPROM_SIZE	1024			?atmega32u4
 
-#	Func		Number
-ADC_REF	AREF		0		# 0b00
-ADC_REF	AVCC		1		# 0b01 (with AREF capacitor)
-ADC_REF	REF_2_56	3		# 0b11 (2.56v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b000000
 ADC_MUX	ADC1		1		# 0b000001
@@ -78,6 +73,10 @@ ADC_MUX	ADC13		37		# 0b100101
 ADC_MUX	ADC_TMP		39		# 0b100111 (Temperature)
 
 #	Type	Name			Value
+MAP	REFS	AREF			0	# 0b00
+MAP	REFS	AVCC			1	# 0b01 (with AREF capacitor)
+MAP	REFS	REF_2_56		3	# 0b11 (2.56v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

@@ -27,10 +27,6 @@ OPTION	TCCR0B_CS0X			# TCCR0B.CS0x
 OPTION	PROGMEM_SIZE	2048
 OPTION	RAM_SIZE	128
 
-#	Func		Number
-ADC_REF	VCC		0		# 0b0
-ADC_REF	REF_1_1		1		# 0b1 (1.1v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b0000
 ADC_MUX	ADC1		1		# 0b0001
@@ -45,6 +41,9 @@ ADC_MUX	REF_1_1		9		# 0b1001 (1.1v Internal Reference)
 ADC_MUX	ADC8		10		# 0b1010 (Temperature)
 
 #	Type	Name			Value
+MAP	REFS	VCC			0	# 0b0
+MAP	REFS	REF_1_1			1	# 0b1 (1.1v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

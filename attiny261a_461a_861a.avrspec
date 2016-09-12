@@ -50,13 +50,6 @@ OPTION	EEPROM_SIZE	128			?attiny261a
 OPTION	EEPROM_SIZE	256			?attiny461a
 OPTION	EEPROM_SIZE	512			?attiny861a
 
-#	Func		Number
-ADC_REF	AVCC		0		# 0b000
-ADC_REF	AREF		1		# 0b001
-ADC_REF	REF_1_1		2		# 0b010 (1.1v Internal Reference)
-ADC_REF	REF_2_56	6		# 0b110 (2.56v Internal Reference)
-ADC_REF	REF_2_56_BYPASS	7		# 0b111 (2.56v Ref with AREF bypass)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b000000
 ADC_MUX	ADC1		1		# 0b000001
@@ -74,6 +67,12 @@ ADC_MUX	AGND		31		# 0b011111 (0v GND)
 ADC_MUX	ADC11		63		# 0b111111 (Temperature)
 
 #	Type	Name			Value
+MAP	REFS	AVCC			0	# 0b000
+MAP	REFS	AREF			1	# 0b001
+MAP	REFS	REF_1_1			2	# 0b010 (1.1v Internal Ref)
+MAP	REFS	REF_2_56		6	# 0b110 (2.56v Internal Ref)
+MAP	REFS	REF_2_56_BYPASS		7	# 0b111 (2.56v Ref+AREF bypass)
+
 	#	NORMAL:OCR1C		--
 MAP	WGM1	FASTPWM:OCR1C		0
 MAP	WGM1	PWM_PC_FC:OCR1C		1

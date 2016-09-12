@@ -32,12 +32,6 @@ OPTION	PROGMEM_SIZE	2048
 OPTION	RAM_SIZE	128
 OPTION	EEPROM_SIZE	128
 
-#	Func		Number
-ADC_REF	AVCC		0		# 0b00
-ADC_REF	AREF		1		# 0b01
-ADC_REF	REF_2_56	2		# 0b10 (2.56v Internal Reference)
-ADC_REF	REF_2_56_BYPASS	3		# 0b11 (2.56v Inter Ref+AREF bypass)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b00000
 ADC_MUX	ADC1		1		# 0b00001
@@ -52,6 +46,12 @@ ADC_MUX	ADC9		9		# 0b01001
 ADC_MUX	ADC10		10		# 0b01010
 ADC_MUX	REF_1_18	30		# 0b11110 (1.18v Internal Reference)
 ADC_MUX	GND		31		# 0b11111 (0v GND)
+
+#	Type	Name			Value
+MAP	REFS	AVCC			0	# 0b00
+MAP	REFS	AREF			1	# 0b01
+MAP	REFS	REF_2_56		2	# 0b10 (2.56v Internal Ref)
+MAP	REFS	REF_2_56_BYPASS		3	# 0b11 (2.56v Intern Ref+AREF bypass)
 
 #	Func	Names		Index
 GPIO	PA0	D0/A0

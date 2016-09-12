@@ -34,10 +34,6 @@ OPTION	PROGMEM_SIZE	4096
 OPTION	RAM_SIZE	256
 OPTION	EEPROM_SIZE	64
 
-#	Func		Number
-ADC_REF	VCC		0		# 0b0
-ADC_REF	REF_1_1		1		# 0b1 (1.1v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b000
 ADC_MUX	ADC1		1		# 0b001
@@ -49,6 +45,9 @@ ADC_MUX	VBAT		6		# 0b110
 ADC_MUX	ADC4		7		# 0b111 (Temperature)
 
 #	Type	Name			Value
+MAP	REFS	VCC			0	# 0b0
+MAP	REFS	REF_1_1			1	# 0b1 (1.1v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

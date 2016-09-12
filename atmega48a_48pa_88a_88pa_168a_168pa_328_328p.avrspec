@@ -65,11 +65,6 @@ OPTION	EEPROM_SIZE	256			?atmega48a/atmega48pa
 OPTION	EEPROM_SIZE	512			?atmega88a/atmega88pa/atmega168a/atmega168pa
 OPTION	EEPROM_SIZE	1024			?atmega328/atmega328p
 
-#	Func		Number
-ADC_REF	AREF		0		# 0b00
-ADC_REF	AVCC		1		# 0b01 (with AREF capacitor)
-ADC_REF	REF_1_1		3		# 0b11 (1.1v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b0000
 ADC_MUX	ADC1		1		# 0b0001
@@ -84,6 +79,10 @@ ADC_MUX	REF_1_1		14		# 0b1110 (1.1v Reference)
 ADC_MUX	AGND		15		# 0b1111 (0v GND)
 
 #	Type	Name			Value
+MAP	REFS	AREF			0	# 0b00
+MAP	REFS	AVCC			1	# 0b01 (with AREF capacitor)
+MAP	REFS	REF_1_1			3	# 0b11 (1.1v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2

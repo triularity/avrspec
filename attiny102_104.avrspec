@@ -27,12 +27,6 @@ OPTION	RAM_SIZE	32
 OPTION	OC0A_REMAP	PA3
 OPTION	OC0B_REMAP	PA5
 
-#	Func		Number
-ADC_REF	VCC		0		# 0b00
-ADC_REF	REF_1_1		1		# 0b01 (1.1v Internal Reference)
-ADC_REF	REF_2_2		2		# 0b10 (2.2v Internal Reference)
-ADC_REF	REF_4_3		3		# 0b11 (4.3v Internal Reference)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b000
 ADC_MUX	ADC1		1		# 0b001
@@ -44,6 +38,11 @@ ADC_MUX	ADC6		6		# 0b110
 ADC_MUX	ADC7		7		# 0b111
 
 #	Type	Name			Value
+MAP	REFS	VCC			0	# 0b00
+MAP	REFS	REF_1_1			1	# 0b01 (1.1v Internal Ref)
+MAP	REFS	REF_2_2			2	# 0b10 (2.2v Internal Ref)
+MAP	REFS	REF_4_3			3	# 0b11 (4.3v Internal Ref)
+
 MAP	WGM0	NORMAL:0xFFFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	PWM_PC:0x1FF		2

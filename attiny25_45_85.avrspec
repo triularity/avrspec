@@ -36,13 +36,6 @@ OPTION	EEPROM_SIZE	128			?attiny25
 OPTION	EEPROM_SIZE	256			?attiny45
 OPTION	EEPROM_SIZE	512			?attiny85
 
-#	Func		Number
-ADC_REF	AVCC		0		# 0b000
-ADC_REF	AREF		1		# 0b001
-ADC_REF	REF_1_1		2		# 0b010 (1.1v Internal Reference)
-ADC_REF	REF_2_56	6		# 0b110 (2.56v Internal Reference)
-ADC_REF	REF_2_56_BYPASS	7		# 0b111 (2.56v Ref with AREF bypass)
-
 #	Func		Channel
 ADC_MUX	ADC0		0		# 0b0000
 ADC_MUX	ADC1		1		# 0b0001
@@ -53,6 +46,12 @@ ADC_MUX	REF_BANDGAP	12		# 0b1100 (Internal Bandgap Reference)
 ADC_MUX	AGND		13		# 0b1101 (0v GND)
 
 #	Type	Name			Value
+MAP	REFS	AVCC			0	# 0b000
+MAP	REFS	AREF			1	# 0b001
+MAP	REFS	REF_1_1			2	# 0b010 (1.1v Internal Ref)
+MAP	REFS	REF_2_56		6	# 0b110 (2.56v Internal Ref)
+MAP	REFS	REF_2_56_BYPASS		7	# 0b111 (2.56v Ref+AREF bypass)
+
 MAP	WGM0	NORMAL:0xFF		0
 MAP	WGM0	PWM_PC:0xFF		1
 MAP	WGM0	CTC:OCR0A		2
