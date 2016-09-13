@@ -1,4 +1,4 @@
-VERSION	2016.09.12
+VERSION	2016.09.13
 
 #	MCU		Pre-Processor
 CORE	attiny25	__AVR_ATtiny25__
@@ -36,16 +36,15 @@ OPTION	EEPROM_SIZE	128			?attiny25
 OPTION	EEPROM_SIZE	256			?attiny45
 OPTION	EEPROM_SIZE	512			?attiny85
 
-#	Func		Channel
-ADC_MUX	ADC0		0		# 0b0000
-ADC_MUX	ADC1		1		# 0b0001
-ADC_MUX	ADC2		2		# 0b0010
-ADC_MUX	ADC3		3		# 0b0011
-ADC_MUX	ADC4		15		# 0b1111 (Temperature)
-ADC_MUX	REF_BANDGAP	12		# 0b1100 (Internal Bandgap Reference)
-ADC_MUX	AGND		13		# 0b1101 (0v GND)
-
 #	Type	Name			Value
+MAP	MUX	ADC0			0	# 0b0000
+MAP	MUX	ADC1			1	# 0b0001
+MAP	MUX	ADC2			2	# 0b0010
+MAP	MUX	ADC3			3	# 0b0011
+MAP	MUX	REF_BANDGAP		12	# 0b1100 (Internal Bandgap Ref)
+MAP	MUX	AGND			13	# 0b1101 (0v GND)
+MAP	MUX	ADC4			15	# 0b1111 (Temperature)
+
 MAP	REFS	AVCC			0	# 0b000
 MAP	REFS	AREF			1	# 0b001
 MAP	REFS	REF_1_1			2	# 0b010 (1.1v Internal Ref)
